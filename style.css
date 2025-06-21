@@ -1,0 +1,88 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(120deg, #f8f9fa, #e0ffe0);
+  color: #333;
+}
+
+header {
+  background: #4caf50;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  animation: slideIn 1.5s ease-in-out;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+}
+
+nav li {
+  background: #81c784;
+  margin: 5px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+nav li:hover {
+  background: #66bb6a;
+  transform: scale(1.1);
+}
+
+#content {
+  padding: 20px;
+  text-align: center;
+  min-height: 200px;
+}
+img[src*="zoo-map.png"] {
+  border: 5px solid #66bb6a;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(102, 187, 106, 0.6);
+  animation: pulse 3s infinite ease-in-out;
+}
+/* Shared styling for all animal text */
+.animal-text {
+    font-family: 'Baloo 2', cursive;
+    font-size: 20px;
+    color: #3e3e3e;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+    line-height: 1.6;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.animal-text:hover {
+    transform: scale(1.03);
+}
+
+/* Unique background gradients per animal */
+.lion { background: linear-gradient(to right, #ffe082, #ffca28); }
+.elephant { background: linear-gradient(to right, #d6d6d6, #a0a0a0); }
+.zebra { background: linear-gradient(to right, #ffffff, #dcdcdc); }
+.giraffe { background: linear-gradient(to right, #ffecb3, #ffd54f); }
+.penguin { background: linear-gradient(to right, #e0f7fa, #80deea); }
+.tiger { background: linear-gradient(to right, #ffe0b2, #ffb74d); }
+.flamingo { background: linear-gradient(to right, #ffd1dc, #ff99bb); }
+.panda { background: linear-gradient(to right, #fffbe6, #e0ffd4); }
+.koala { background: linear-gradient(to right, #dcdde1, #a4b0be); }
+.rhino { background: linear-gradient(to right, #cfd8dc, #90a4ae); }
+.monkey { background: linear-gradient(to right, #fbe9e7, #ffab91); }
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
